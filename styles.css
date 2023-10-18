@@ -1,0 +1,50 @@
+/* Стилі для контейнера */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-gap: 10px;
+}
+
+/* Загальні стилі для всіх блоків */
+.box {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    text-align: center;
+    line-height: 100px;
+    font-size: 14px;
+}
+
+/* Стилі для різних класів блоків */
+.box.static {
+    background-color: #ff5733;
+    position: static; /* Статичне позиціонування (за замовчуванням) */
+    z-index: 1; /* Значення z-index для блоку static */
+}
+
+.box.relative {
+    background-color: #33ff57;
+    position: relative; /* Відносне позиціонування */
+    top: 20px; /* Змініть позицію за допомогою top, right, bottom, left */
+    left: 20px;
+    z-index: 2; /* Значення z-index для блоку relative */
+}
+
+.box.absolute {
+    background-color: #5733ff;
+    position: absolute; /* Абсолютне позиціонування, відносно контейнера .container */
+    top: 0;
+    left: 0;
+    z-index: 3; /* Значення z-index для блоку absolute */
+}
+
+.box.fixed {
+    background-color: #ff3357;
+    position: fixed; /* Фіксоване позиціонування */
+    top: 0;
+    right: 0;
+    z-index: 4; /* Значення z-index для блоку fixed */
+}
+div {
+    height: 100px;
+}
